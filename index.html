@@ -142,13 +142,25 @@ nav {
 .hero h1 { font-size: 40px; margin-bottom: 15px; }
 
 
-.typing {
+/* .typing {
     color: #00f5ff;
     font-size: 30px;
     min-height: 30px;
     display: block;
     margin-bottom: 30px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+} */
+
+    @font-face {
+    font-family: "jainipurva";
+    src: url("JainiPurva-Regular.ttf");
+}
+
+
+
+.typing {
+    font-family: "jainipurva", serif;
+    font-size: 40px;
 }
 
 /* BUTTONS */
@@ -538,14 +550,20 @@ footer {
 // Typing Effect
 const text = "Python Full Stack Developer | QA Automation | Manual Testing | Power BI ";
 let i = 0;
-function typing() {
-    if (i < text.length) {
-        document.querySelector(".typing").innerHTML += text.charAt(i);
+
+function type() {
+    const el = document.querySelector(".typing");
+
+    if (i === 0) el.innerHTML = ""; // reset
+
+    if (i < txt.length) {
+        el.innerHTML += txt[i];
         i++;
-        setTimeout(typing, 80);
+        setTimeout(type, 80);
     }
 }
-typing();
+
+type();
 
 // Scroll Animation
 window.addEventListener("scroll", () => {
