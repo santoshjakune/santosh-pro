@@ -144,12 +144,12 @@ nav {
 
 .typing {
     color: #00f5ff;
-    font-size: 30px;
+    /* font-size: 30px;
     min-height: 30px;
     display: block;
     margin-bottom: 30px;
     color: linear-gradient(45deg, #00f5ff, #ff00c8);
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
 }
 
 /* BUTTONS */
@@ -512,13 +512,22 @@ footer {
 <script>
 
 // Typing Effect
-const text = "Python Full Stack Developer | QA Automation | Manual Testing | Power BI ";
+// const text = "Python Full Stack Developer | QA Automation | Manual Testing | Power BI ";
+// let i = 0;
+// function typing() {
+//     if (i < text.length) {
+//         document.querySelector(".typing").innerHTML += text.charAt(i);
+//         i++;
+//         setTimeout(typing, 80);
+//     }
+// }
+    const text = "Full Stack Developer | QA Engineer | Power BI Developer";
 let i = 0;
-function typing() {
-    if (i < text.length) {
+function typing(){
+    if(i < text.length){
         document.querySelector(".typing").innerHTML += text.charAt(i);
         i++;
-        setTimeout(typing, 80);
+        setTimeout(typing,80);
     }
 }
 typing();
