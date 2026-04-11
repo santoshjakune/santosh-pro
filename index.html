@@ -151,7 +151,7 @@ nav {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 } */
 
- @font-face {
+@font-face {
     font-family: "jainipurva";
     src: url("./JainiPurva-Regular.ttf") format("truetype");
     font-weight: normal;
@@ -549,7 +549,7 @@ footer {
 <script>
 
 // Typing Effect
-const text = "Python Full Stack Developer | QA Automation | Manual Testing | Power BI ";
+// const text = "Python Full Stack Developer | QA Automation | Manual Testing | Power BI ";
 
 //     let i = 0;
 // function typing() {
@@ -561,12 +561,13 @@ const text = "Python Full Stack Developer | QA Automation | Manual Testing | Pow
 // }
 // typing();
     
+let txt = "फुल स्टॅक डेव्हलपर";  // ✅ JainiPurva works on Marathi
 let i = 0;
 
 function type() {
     const el = document.querySelector(".typing");
 
-    if (i === 0) el.innerHTML = ""; // reset
+    if (i === 0) el.innerHTML = "";
 
     if (i < txt.length) {
         el.innerHTML += txt[i];
