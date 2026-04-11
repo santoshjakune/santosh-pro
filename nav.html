@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Santosh Portfolio</title>
+
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(-45deg, #0f172a, #1e3a8a, #9333ea, #ff00c8);
+    background-size: 400% 400%;
+    animation: bg 10s ease infinite;
+    color: white;
+}
+
+@keyframes bg {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* NAVBAR */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    position: sticky;
+    top: 0;
+    background: rgba(0,0,0,0.4);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: #00f5ff;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    position: relative;
+    padding: 5px;
+}
+
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    left: 0;
+    bottom: -3px;
+    background: #00f5ff;
+    transition: 0.3s;
+}
+
+.nav-links a:hover::after { width: 100%; }
+
+.menu-btn {
+    display: none;
+    font-size: 25px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: white;
+}
+
+/* HERO */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero h1 { font-size: 40px; margin-bottom: 15px; }
+
+.typing {
+    color: #00f5ff;
+    font-size: 20px;
+    min-height: 30px;
+    display: block;
+    margin-bottom: 30px;
+}
+
+/* BUTTONS */
+button {
+    padding: 12px 25px;
+    margin: 10px;
+    border: none;
+    background: linear-gradient(45deg, #00f5ff, #ff00c8);
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover { transform: scale(1.1); }
+
+/* SECTIONS */
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+    color: #00f5ff;
+}
+
+/* CARDS */
+.cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card {
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    width: 250px;
+    border-radius: 15px;
+    border: 1px solid rgba(255,255,255,0.2);
+    opacity: 0;
+    transform: translateY(50px);
+    transition: 0.6s;
+}
+
+.card.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* CONTACT */
+.contact-card {
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: 15px;
+    max-width: 500px;
+    margin: auto;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 8px;
+    border: none;
+}
+
+/* MOBILE NAVBAR (🔥 UPDATED) */
+@media(max-width:768px){
+
+.nav-links {
+    position: absolute;
+    top: 70px;
+    right: 15px;
+
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+
+    width: 220px;
+    padding: 15px;
+
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(15px);
+
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 20px;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+
+    transform: scale(0.9);
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.nav-links.active {
+    display: flex;
+    transform: scale(1);
+    opacity: 1;
+}
+
+.nav-links a {
+    padding: 12px;
+    border-radius: 10px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.nav-links a:hover {
+    background: linear-gradient(45deg,#00f5ff,#ff00c8);
+    transform: translateX(5px);
+}
+
+.menu-btn { display: block; }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+    <div class="logo">Santosh</div>
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+    <div class="nav-links" id="navLinks">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#">Resume</a>
+        <a href="#contact">Contact</a>
+    </div>
+</nav>
+
+<div class="hero">
+    <h1>Hi, I'm Santosh 👋</h1>
+    <span class="typing"></span>
+</div>
+
+<section id="about">
+    <h2>About</h2>
+    <p>I am Full Stack Developer</p>
+</section>
+
+<section id="skills">
+    <h2>Skills</h2>
+    <div class="cards">
+        <div class="card">Python</div>
+        <div class="card">Django</div>
+        <div class="card">JavaScript</div>
+    </div>
+</section>
+
+<section id="projects">
+    <h2>Projects</h2>
+    <div class="cards">
+        <div class="card">Project 1</div>
+        <div class="card">Project 2</div>
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Contact</h2>
+    <div class="contact-card">
+        <input type="text" placeholder="Your Name">
+        <input type="email" placeholder="Email">
+        <textarea placeholder="Message"></textarea>
+        <button>Send</button>
+    </div>
+</section>
+
+<script>
+
+// typing
+let txt="Full Stack Developer";
+let i=0;
+function type(){
+ if(i<txt.length){
+  document.querySelector(".typing").innerHTML+=txt[i];
+  i++; setTimeout(type,80);
+ }
+}
+type();
+
+// scroll animation
+window.addEventListener("scroll",()=>{
+ document.querySelectorAll(".card").forEach(el=>{
+  if(el.getBoundingClientRect().top<window.innerHeight-50){
+   el.classList.add("show");
+  }
+ });
+});
+
+// menu toggle
+function toggleMenu(){
+ document.getElementById("navLinks").classList.toggle("active");
+}
+
+</script>
+
+</body>
+</html>
