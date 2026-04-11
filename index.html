@@ -59,7 +59,7 @@ nav {
     width: 220px;
     padding: 15px;
 
-    /* 🔥 Glass Card UI */
+    /*Glass Card UI */
     background: rgba(255,255,255,0.1);
     backdrop-filter: blur(15px);
     border: 1px solid rgba(255,255,255,0.2);
@@ -240,7 +240,7 @@ section h2 {
     margin-bottom: 8px;
 }
 
-/* CONTACT FORM CARD */
+/* CONTACT */
 .contact-card {
     background: rgba(255,255,255,0.1);
     backdrop-filter: blur(10px);
@@ -347,7 +347,7 @@ footer {
     color: rgba(255,255,255,0.6);
 }
 
-/* MOBILE NAVBAR (🔥 UPDATED) */
+/* MOBILE NAVBAR*/
 @media(max-width:768px){
 
 .nav-links {
@@ -416,7 +416,7 @@ footer {
 
 <!-- HERO -->
 <div class="hero">
-    <h1>Hi, I'm Santosh 👋</h1>
+    <h1>Hi, I'm Santosh👋</h1>
     <span class="typing"></span>
     <br>
     <a href="#contact"><button>Hire Me</button></a>
@@ -512,22 +512,13 @@ footer {
 <script>
 
 // Typing Effect
-// const text = "Python Full Stack Developer | QA Automation | Manual Testing | Power BI ";
-// let i = 0;
-// function typing() {
-//     if (i < text.length) {
-//         document.querySelector(".typing").innerHTML += text.charAt(i);
-//         i++;
-//         setTimeout(typing, 80);
-//     }
-// }
-    const text = "Full Stack Developer | QA Engineer | Power BI Developer";
+const text = "Python Full Stack Developer | QA Automation | Manual Testing | Power BI ";
 let i = 0;
-function typing(){
-    if(i < text.length){
+function typing() {
+    if (i < text.length) {
         document.querySelector(".typing").innerHTML += text.charAt(i);
         i++;
-        setTimeout(typing,80);
+        setTimeout(typing, 80);
     }
 }
 typing();
