@@ -431,6 +431,53 @@ footer {
     transform:scale(1.1);
 }
 
+    /* contact no ---*/
+      .contact-info {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.info-card {
+    text-align: center;
+    padding: 20px 25px;
+    border-radius: 18px;
+    min-width: 180px;
+    color: white;
+
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    transition: 0.3s ease;
+}
+
+.info-card span {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.info-card a {
+    text-decoration: none;
+    color: white;
+}
+
+.info-card:hover {
+    transform: translateY(-8px) scale(1.05);
+}
+
+/* Colors */
+.info-card:nth-child(1) {
+    background: linear-gradient(135deg, #4facfe, #00f2fe);
+}
+.info-card:nth-child(2) {
+    background: linear-gradient(135deg, #a18cd1, #fbc2eb);
+}
+.info-card:nth-child(3) {
+    background: linear-gradient(135deg, #ff758c, #ff7eb3);
+}
+.info-card:nth-child(4) {
+    background: linear-gradient(135deg, #25D366, #128C7E);
+}
+    
 </style>
 </head>
 <body>
@@ -506,30 +553,49 @@ I am continuously learning and improving my skills to stay updated with the late
 
     <!-- Info Cards — Skills ! -->
     <!-- Phone -->
+   <div class="contact-info">
+
+    <!-- Phone -->
     <div class="info-card">
-        <span>📞</span>
+        <span>
+            <svg width="24" height="24" fill="white" viewBox="0 0 24 24">
+                <path d="M6.6 10.8a15.05 15.05 0 006.6 6.6l2.2-2.2c.3-.3.7-.4 1.1-.3 1.2.4 2.5.6 3.9.6.6 0 1 .4 1 1V21c0 .6-.4 1-1 1C10.3 22 2 13.7 2 3c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.4.2 2.7.6 3.9.1.4 0 .8-.3 1.1l-2.2 2.2z"/>
+            </svg>
+        </span>
         <a href="tel:+91912345678">+91 912345678</a>
     </div>
 
     <!-- Email -->
     <div class="info-card">
-        <span>📧</span>
+        <span>
+            <svg width="24" height="24" fill="white" viewBox="0 0 24 24">
+                <path d="M20 4H4c-1.1 0-2 .9-2 2v.01l10 6.99 10-6.99V6c0-1.1-.9-2-2-2zm0 4.24l-8 5.6-8-5.6V18c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8.24z"/>
+            </svg>
+        </span>
         <a href="mailto:your@email.com">your@email.com</a>
-    </div>
-
-    <!-- WhatsApp -->
-    <div class="info-card">
-        <span>📲</span>
-        <a href="https://wa.me/91912345678" target="_blank">Chat on WhatsApp</a>
     </div>
 
     <!-- Location -->
     <div class="info-card">
-        <span>📍</span>
+        <span>
+            <svg width="24" height="24" fill="white" viewBox="0 0 24 24">
+                <path d="M12 2C8.1 2 5 5.1 5 9c0 5.3 7 13 7 13s7-7.7 7-13c0-3.9-3.1-7-7-7zm0 9.5c-1.4 0-2.5-1.1-2.5-2.5S10.6 6.5 12 6.5s2.5 1.1 2.5 2.5S13.4 11.5 12 11.5z"/>
+            </svg>
+        </span>
         <a href="https://www.google.com/maps/search/?api=1&query=Karnataka+India" target="_blank">
             Karnataka, India
         </a>
     </div>
+
+    <!-- WhatsApp -->
+<div class="info-card">
+    <span>
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+            <path d="M12 2C6.48 2 2 6.26 2 11.52c0 1.85.5 3.6 1.44 5.14L2 22l5.53-1.4A10.3 10.3 0 0012 21c5.52 0 10-4.26 10-9.48S17.52 2 12 2zm0 17.2c-1.64 0-3.18-.42-4.52-1.15l-.32-.18-3.28.83.88-3.2-.2-.33A7.96 7.96 0 014 11.52C4 7.43 7.58 4.2 12 4.2s8 3.23 8 7.32-3.58 7.32-8 7.32zm4.2-5.48c-.23-.12-1.36-.67-1.57-.75-.21-.08-.36-.12-.51.12-.15.23-.59.75-.72.9-.13.15-.26.17-.49.06-.23-.12-.97-.36-1.85-1.15-.68-.6-1.14-1.35-1.27-1.58-.13-.23-.01-.35.1-.47.1-.1.23-.26.35-.39.12-.13.15-.23.23-.38.08-.15.04-.28-.02-.39-.06-.12-.51-1.23-.7-1.69-.19-.45-.38-.39-.51-.39h-.43c-.15 0-.39.06-.59.28-.2.23-.77.75-.77 1.82s.79 2.1.9 2.25c.12.15 1.56 2.38 3.78 3.34.53.23.95.37 1.28.47.54.17 1.03.15 1.42.09.43-.06 1.36-.56 1.55-1.1.19-.55.19-1.01.13-1.1-.06-.09-.21-.15-.44-.27z"/>
+        </svg>
+    </span>
+    <a href="https://wa.me/91912345678" target="_blank">WhatsApp</a>
+</div>
 
 </div>
   
